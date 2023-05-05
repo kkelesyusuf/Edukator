@@ -33,5 +33,24 @@ namespace Edukator.PresentationLayer.Controllers
             _socialMediaService.TInsert(socialMedia);
             return RedirectToAction("Index");
         }
+        public IActionResult DeleteSocialMedia(int id)
+        {
+            var value = _socialMediaService.TGetByID(id);
+            _socialMediaService.TDelete(value);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet] 
+        public IActionResult UpdateSocialMedia(int id)
+        {
+            var values = _socialMediaService.TGetByID(id);
+            return View(values);
+        }
+        [HttpPost]
+        public IActionResult UpdateSocialMedia(SocialMedia socialMedia)
+        {
+            _socialMediaService.TUpdate(socialMedia);
+            return RedirectToAction("Index");
+        }
     }
 }

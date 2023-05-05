@@ -20,7 +20,7 @@ namespace Edukator.DataAccessLayer.Repositories
         public T GetByID(int id)
         {
             var context = new Context();
-            return context.Set<T>().Find();
+            return context.Set<T>().Find(id);
         }
 
         public List<T> GetList()
