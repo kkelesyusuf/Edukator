@@ -44,6 +44,7 @@
         </div>
     </div>
 </div>
+
 <div class="container-fluid pt-4 px-4">
     <div class="row g-4">
         <div class="col-sm-6 col-xl-3">
@@ -79,6 +80,88 @@
                 <div class="ms-3">
                     <p class="mb-2">2 Nolu ID'ye ait Kurs</p>
                     <h6 class="mb-0">@ViewBag.getTitleByCourseID2</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-atom fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Yazılım Kurs Sasyısı</p>
+                    <h6 class="mb-0">@ViewBag.softwareCourseCount</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-bus-alt fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">En Yüksek Kurs Fiyatı</p>
+                    <h6 class="mb-0">@ViewBag.maxCoursePrice</h6>
+                </div>
+            </div>
+        </div>
+    <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-bicycle fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">En Düşüşk Kurs Fiyatı</p>
+                    <h6 class="mb-0">@ViewBag.minCoursePrice</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-h-square fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">En Pahalı Kurs</p>
+                    <h6 class="mb-0">@ViewBag.mostExpensiveCourse</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-calendar fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Son Eklenen Kurs</p>
+                    <h6 class="mb-0">@ViewBag.lastCourseTitle</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-database fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Ortalama Yazılım Kurs Fiyatı</p>
+                    <h6 class="mb-0">@ViewBag.avgPriceForSoftwareCourse</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-egg fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Son 3 Kursun Fiyatı</p>
+                    <h6 class="mb-0">@ViewBag.last3TotalPrice</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-deaf fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">En Değerli Kurs</p>
+                    <h6 class="mb-0">@ViewBag.getCourseCategorySoftwareAndReviewMore9Score</h6>
                 </div>
             </div>
         </div>
