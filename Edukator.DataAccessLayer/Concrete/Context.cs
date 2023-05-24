@@ -24,5 +24,6 @@ namespace Edukator.DataAccessLayer.Concrete
         public DbSet<AboutGrid> AboutGrids { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<MailSubscribe> MailSubscribes { get; set; }
+        public DbSet<About> Abouts { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿<footer class="w3l-footer-22 position-relative">
+﻿@model List<Edukator.EntityLayer.Concrete.SocialMedia>
+<footer class="w3l-footer-22 position-relative">
     <div class="footer-sub py-5">
         <div class="container py-md-5">
             <div class="row sub-columns">
@@ -9,21 +10,12 @@
                     </p>
                     <div class="columns-2">
                         <ul class="social">
-                            <li>
-                                <a href="#facebook"><span class="fab fa-facebook-f" aria-hidden="true"></span></a>
-                            </li>
-                            <li>
-                                <a href="#linkedin"><span class="fab fa-linkedin-in" aria-hidden="true"></span></a>
-                            </li>
-                            <li>
-                                <a href="#twitter"><span class="fab fa-twitter" aria-hidden="true"></span></a>
-                            </li>
-                            <li>
-                                <a href="#google"><span class="fab fa-google-plus-g" aria-hidden="true"></span></a>
-                            </li>
-                            <li>
-                                <a href="#pinterest"><span class="fab fa-pinterest-p" aria-hidden="true"></span></a>
-                            </li>
+                            @foreach (var item in Model)
+                            {
+                                <li>
+                                    <a href="@item.SocialMediaUrl" target="_blank"><span class="@item.SocialMediaIcon" aria-hidden="true"></span></a>
+                                </li>
+                            }
                         </ul>
                     </div>
                 </div>
