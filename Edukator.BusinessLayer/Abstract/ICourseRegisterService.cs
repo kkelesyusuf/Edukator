@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace Edukator.BusinessLayer.Abstract
 {
-    public interface ICourseService:IGenericService<Course>
+    public interface ICourseRegisterService:IGenericService<CourseRegister>
     {
-        List<Course> TGetCourseWithCategory();
-        List<Course> TGetCourseWithCategories();
-        List<Course> TGetLast5Course();
+        List<CourseRegister> TCourseRegisterListWithCoursesAndUsers();
     }
 }
