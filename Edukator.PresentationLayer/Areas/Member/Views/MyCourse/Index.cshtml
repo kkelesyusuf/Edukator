@@ -1,0 +1,22 @@
+﻿@model List<Edukator.EntityLayer.Concrete.CourseRegister>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Member/Views/MemberLayout/Index.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>$</th>
+        <th>Kurs Adı</th>
+        <th>Kursa Git</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.CourseRegisterID</th>
+            <th>@item.Course.Title</th>
+            <th><a href="#" class="btn btn-primary">Kursa Git</a></th>
+        </tr>
+    }
+</table>
+
