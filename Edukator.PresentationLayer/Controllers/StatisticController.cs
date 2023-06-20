@@ -11,7 +11,7 @@ namespace Edukator.PresentationLayer.Controllers
     {
         public IActionResult Index()
         {
-            Context context = new Context();
+            Context context = new Context();    
 
             ViewBag.totalCategory = context.Categories.Count();
             ViewBag.totalCourse = context.Courses.Count();

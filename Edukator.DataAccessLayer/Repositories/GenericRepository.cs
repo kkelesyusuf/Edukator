@@ -43,8 +43,5 @@ namespace Edukator.DataAccessLayer.Repositories
             context.SaveChanges();
         }
 
-        public class FeatureDal
-        {
-        }
     }
 }

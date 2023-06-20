@@ -4,14 +4,16 @@ using Edukator.DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Edukator.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230610183758_mig_add_table_join")]
+    partial class mig_add_table_join
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -399,24 +401,6 @@ namespace Edukator.DataAccessLayer.Migrations
                     b.HasKey("MailSubscribeID");
 
                     b.ToTable("MailSubscribes");
-                });
-
-            modelBuilder.Entity("Edukator.EntityLayer.Concrete.Map", b =>
-                {
-                    b.Property<int>("MapID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("MapURL")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("MapID");
-
-                    b.ToTable("Maps");
                 });
 
             modelBuilder.Entity("Edukator.EntityLayer.Concrete.Progress", b =>

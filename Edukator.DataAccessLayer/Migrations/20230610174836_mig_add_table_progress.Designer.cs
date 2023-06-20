@@ -4,14 +4,16 @@ using Edukator.DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Edukator.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230610174836_mig_add_table_progress")]
+    partial class mig_add_table_progress
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -365,27 +367,6 @@ namespace Edukator.DataAccessLayer.Migrations
                     b.ToTable("Features");
                 });
 
-            modelBuilder.Entity("Edukator.EntityLayer.Concrete.Join", b =>
-                {
-                    b.Property<int>("JoinID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("JoinID");
-
-                    b.ToTable("Joins");
-                });
-
             modelBuilder.Entity("Edukator.EntityLayer.Concrete.MailSubscribe", b =>
                 {
                     b.Property<int>("MailSubscribeID")
@@ -399,24 +380,6 @@ namespace Edukator.DataAccessLayer.Migrations
                     b.HasKey("MailSubscribeID");
 
                     b.ToTable("MailSubscribes");
-                });
-
-            modelBuilder.Entity("Edukator.EntityLayer.Concrete.Map", b =>
-                {
-                    b.Property<int>("MapID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("MapURL")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("MapID");
-
-                    b.ToTable("Maps");
                 });
 
             modelBuilder.Entity("Edukator.EntityLayer.Concrete.Progress", b =>

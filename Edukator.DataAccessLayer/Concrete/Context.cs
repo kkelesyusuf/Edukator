@@ -26,5 +26,11 @@ namespace Edukator.DataAccessLayer.Concrete
         public DbSet<MailSubscribe> MailSubscribes { get; set; }
         public DbSet<About> Abouts { get; set; }
         public DbSet<CourseRegister> CourseRegisters { get; set; }
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<Progress> Progresses { get; set; }
+        public DbSet<Join> Joins { get; set; }
+        public DbSet<Map> Maps { get; set; }
+        
+
     }
 }
